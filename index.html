@@ -14,14 +14,25 @@
 
 <body>
 
-  <!-- Static Gradient Background -->
-  <div class="background"></div>
+  
+  
+  <section class="hero">
+
+  </section>
+
+  <section class="fade-transition"></section>
+
+  <section class="next">
+  </section>
+
 
   <!-- Scroll Space (Top) -->
   <div class="spacer"></div>
 
   <!-- Fixed Center Title -->
   <h1 class="title">PERIVALLON</h1>
+
+  <h1 class="scrollPrompt"><i>pierce your veil.</i> </h1>
 
   <!-- Scroll Space (Bottom) -->
   <div class="spacer"></div>
@@ -31,7 +42,8 @@
 
   <!-- Script -->
   <script>
-    const title = document.querySelector(".title");
+    
+    const title = document.querySelector(".title"); 
 
     window.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
@@ -54,6 +66,19 @@
         arrow.style.opacity = 0;
       }
     });
+
+   const scrollPrompt = document.querySelector(".scrollPrompt");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY <= 250) {
+        scrollPrompt.style.opacity = 0.6;
+      } else {
+        scrollPrompt.style.opacity = 0;
+      }
+    });
+
   </script>
 
 </body>
