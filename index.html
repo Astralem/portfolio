@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Perivallon</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Static Gradient Background -->
+  <div class="background"></div>
+
+  <!-- Scroll Space (Top) -->
+  <div class="spacer"></div>
+
+  <!-- Fixed Center Title -->
+  <h1 class="title">PERIVALLON</h1>
+
+  <!-- Scroll Space (Bottom) -->
+  <div class="spacer"></div>
+
+  <!-- Arrow -->
+  <img class="arrow" src="img/arrow.png" alt="Down Arrow">
+
+  <!-- Script -->
+  <script>
+    const title = document.querySelector(".title");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 250) {
+        title.style.opacity = 1;
+      } else {
+        title.style.opacity = 0;
+      }
+    });
+
+    const arrow = document.querySelector(".arrow");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY <= 250) {
+        arrow.style.opacity = 1;
+      } else {
+        arrow.style.opacity = 0;
+      }
+    });
+  </script>
+
+</body>
+</html>
