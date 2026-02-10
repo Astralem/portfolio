@@ -5,16 +5,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Cormorant Garamond", serif;
-  min-height: 300vh; 
-  scrollbar-width: none;
-}
-
-.hero {
-
-}
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -27,8 +17,14 @@ body {
 	}
 }
 
+body {
+  font-family: "Cormorant Garamond", serif;
+  min-height: 300vh; 
+  scrollbar-width: none;
+}
+
 .spacer {
-  height: 150vh;
+height: 400vh;
 }
 
 .title {
@@ -48,7 +44,9 @@ body {
   white-space: nowrap;
 
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease,
+              top 1.2s ease,
+              transform 1.2s ease;
 }
 
 .scrollPrompt {
@@ -65,9 +63,9 @@ body {
   text-align: center;
   white-space: nowrap;
 
-  color:white;
+  color:rgb(0, 0, 0);
 
-  opacity: 0.6;
+  opacity: 0;
   transition: opacity 0.8s ease;
   z-index: 1;
 }
@@ -89,6 +87,29 @@ body {
   transition: opacity 0.8s ease;
 }
 
+/* 
 ::-webkit-scrollbar {
   display: none;
+}
+*/
+
+
+.options {
+  position: fixed;
+
+  top: 80%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+
+  color: black;
+
+  text-align: center;
+  white-space: nowrap;
+
+  opacity: 1;
+  transition: opacity 0.8s ease;
 }
