@@ -23,6 +23,19 @@ body {
   scrollbar-width: none;
 }
 
+.gradientbackground {
+  position: fixed;   /* Locks it to viewport */
+  inset: 0;          /* top:0 left:0 right:0 bottom:0 */
+  
+  background: linear-gradient(178deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 53%, rgba(253, 255, 230, 1) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  z-index: -1;     /* Places it behind content */
+}
+
 .spacer {
 height: 400vh;
 }
@@ -46,13 +59,14 @@ height: 400vh;
   opacity: 0;
   transition: opacity 0.8s ease,
               top 1.2s ease,
-              transform 1.2s ease;
+              transform 1.2s ease,
+              color 1.2s ease;
 }
 
 .scrollPrompt {
   position: fixed;
 
-  top: 73%;
+  top: 67%;
   left: 50%;
   transform: translateX(-50%);
   
@@ -65,7 +79,7 @@ height: 400vh;
 
   color:rgb(0, 0, 0);
 
-  opacity: 0.40;
+  opacity: 0.4;
   transition: opacity 0.8s ease;
   z-index: 1;
 }
@@ -156,3 +170,4 @@ height: 400vh;
               left 1.2s ease,
               transform 1.2s ease;
 }
+

@@ -10,20 +10,13 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+
 </head>
 
 <body>
   
-  <section class="hero">
-
-  </section>
-
-  <section class="fade-transition"></section>
-
-  <section class="next">
-  </section>
-
-
   <!-- Scroll Space (Top) -->
   <div class="spacer"></div>
 
@@ -44,116 +37,8 @@
   <!-- Arrow -->
   <img class="arrow" src="img/arrow.png" alt="Down Arrow">
 
-  <!-- Script -->
-  <script>
-    
-    const title = document.querySelector(".title"); 
-
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-
-      if (scrollY > 250) {
-        title.style.opacity = 1;
-      } else {
-        title.style.opacity = 0;
-      }
-
-      if (scrollY > 1000) {
-        title.style.top = "40%";
-      } else {
-        title.style.top = "50%";
-      }
-
-    });
-
-    const optionsSelf = document.querySelector(".optionsSelf");
-
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-
-      if (scrollY > 1000) {
-        optionsSelf.style.opacity = 0.6;
-      } else {
-        optionsSelf.style.opacity = 0;
-      }
-
-      if (scrollY > 1000) {
-        optionsSelf.style.left = "30%";
-      } else {
-        optionsSelf.style.left = "10%";
-      }
-    });
-    
-    const optionsAttained = document.querySelector(".optionsAttained");
-
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-
-      if (scrollY > 1000) {
-        optionsAttained.style.opacity = 0.6;
-      } else {
-        optionsAttained.style.opacity = 0;
-      }
-
-      if (scrollY > 1000) {
-        optionsAttained.style.top = "80%";
-      } else {
-        optionsAttained.style.top = "100%";
-      }
-    });
-
-    const optionsSkillTree = document.querySelector(".optionsSkillTree");
-
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-
-      if (scrollY > 1000) {
-        optionsSkillTree.style.opacity = 0.6;
-      } else {
-        optionsSkillTree.style.opacity = 0;
-      }
-
-      if (scrollY > 1000) {
-        optionsSkillTree.style.left = "70%";
-      } else {
-        optionsSkillTree.style.left = "100%";
-      }
-
-    });
-
-
-
-    const arrow = document.querySelector(".arrow");
-
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-
-      if (scrollY <= 250) {
-        arrow.style.opacity = 1;
-      } else {
-        arrow.style.opacity = 0;
-      }
-    });
-
-   const scrollPrompt = document.querySelector(".scrollPrompt");
-
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-
-      if (scrollY <= 250) {
-        scrollPrompt.style.opacity = 0.6;
-      } else {
-        scrollPrompt.style.opacity = 0;
-      }
-    });
-
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    }
-
-    
-
-  </script>
+  <!-- Background Gradient -->
+  <div class="gradientbackground"></div>
 
 </body>
 </html>
