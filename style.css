@@ -52,7 +52,7 @@ height: 400vh;
 .scrollPrompt {
   position: fixed;
 
-  top: 66%;
+  top: 73%;
   left: 50%;
   transform: translateX(-50%);
   
@@ -65,7 +65,7 @@ height: 400vh;
 
   color:rgb(0, 0, 0);
 
-  opacity: 0;
+  opacity: 0.40;
   transition: opacity 0.8s ease;
   z-index: 1;
 }
@@ -87,14 +87,11 @@ height: 400vh;
   transition: opacity 0.8s ease;
 }
 
-/* 
 ::-webkit-scrollbar {
   display: none;
 }
-*/
 
-
-.options {
+.optionsSelf {
   position: fixed;
 
   top: 80%;
@@ -110,6 +107,52 @@ height: 400vh;
   text-align: center;
   white-space: nowrap;
 
-  opacity: 1;
-  transition: opacity 0.8s ease;
+  opacity: 0; 
+  transition: opacity 0.8s ease,
+              left 1.2s ease,
+              transform 1.2s ease;
+}
+
+.optionsAttained {
+  position: fixed;
+
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+
+  color: black;
+
+  text-align: center;
+  white-space: nowrap;
+
+  opacity: 0;
+  transition: opacity 0.8s ease,
+              top 1.2s ease,
+              transform 1.2s ease;
+}
+
+.optionsSkillTree {
+  position: fixed;
+
+  top: 80%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+
+  color: black;
+
+  text-align: center;
+  white-space: nowrap;
+
+  opacity: 0;
+  transition: opacity 0.8s ease,
+              left 1.2s ease,
+              transform 1.2s ease;
 }

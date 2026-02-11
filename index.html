@@ -34,7 +34,9 @@
   <h1 class="scrollPrompt"><i>pierce your veil.</i> </h1>
 
   <!-- For the options after scrolling-->
-  <h1 class="options"><i>THE SELF</i></h1>
+  <h1 class="optionsSelf"><i>THE SELF</i></h1>
+  <h1 class="optionsAttained"><i>THE ATTAINED</i></h1>
+  <h1 class="optionsSkillTree"><i>THE SKILL TREE</i></h1>
 
   <!-- Scroll Space (Bottom) -->
   <div class="spacer"></div>
@@ -56,7 +58,7 @@
         title.style.opacity = 0;
       }
 
-      if (scrollY > 3400) {
+      if (scrollY > 1000) {
         title.style.top = "40%";
       } else {
         title.style.top = "50%";
@@ -64,17 +66,62 @@
 
     });
 
-    const options = document.querySelector(".options");
+    const optionsSelf = document.querySelector(".optionsSelf");
 
     window.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
 
-      if (scrollY >= 3400) {
-        options.style.opacity = 0.6;
+      if (scrollY > 1000) {
+        optionsSelf.style.opacity = 0.6;
       } else {
-        options.style.opacity = 0;
+        optionsSelf.style.opacity = 0;
+      }
+
+      if (scrollY > 1000) {
+        optionsSelf.style.left = "30%";
+      } else {
+        optionsSelf.style.left = "10%";
       }
     });
+    
+    const optionsAttained = document.querySelector(".optionsAttained");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 1000) {
+        optionsAttained.style.opacity = 0.6;
+      } else {
+        optionsAttained.style.opacity = 0;
+      }
+
+      if (scrollY > 1000) {
+        optionsAttained.style.top = "80%";
+      } else {
+        optionsAttained.style.top = "100%";
+      }
+    });
+
+    const optionsSkillTree = document.querySelector(".optionsSkillTree");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 1000) {
+        optionsSkillTree.style.opacity = 0.6;
+      } else {
+        optionsSkillTree.style.opacity = 0;
+      }
+
+      if (scrollY > 1000) {
+        optionsSkillTree.style.left = "70%";
+      } else {
+        optionsSkillTree.style.left = "100%";
+      }
+
+    });
+
+
 
     const arrow = document.querySelector(".arrow");
 
@@ -99,6 +146,10 @@
         scrollPrompt.style.opacity = 0;
       }
     });
+
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
 
     
 
